@@ -13,8 +13,10 @@ async def main():
     await client.start()
 
     await client.get_dialogs()
+    
     if target.lstrip("-").isdigit():
         target = int(target)
+    
     entity = await client.get_entity(target)
 
     deleted = 0
